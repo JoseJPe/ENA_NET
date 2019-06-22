@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ServicioControler.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Mascota.cs" />
     <Compile Include="Models\Servicio.cs" />

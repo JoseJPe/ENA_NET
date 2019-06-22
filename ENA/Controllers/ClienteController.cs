@@ -10,18 +10,21 @@ namespace ENA.Controllers
     class ClienteController 
     {
 
-        public void InsertarCliente(int id, string nombre)
+        public void InsertaCliente(string nombreCliente, string rut, string direccion, string email, int fono)
         {
-            if (id != 0 && !string.IsNullOrEmpty(nombre))
+            if (!string.IsNullOrEmpty(nombreCliente) && !string.IsNullOrEmpty(rut) && !string.IsNullOrEmpty(direccion) && !string.IsNullOrEmpty(email) && fono != 0)
             {
 
-                Mascota obj = new Mascota(id, nombre);
+                Cliente objCliente = new Cliente(nombreCliente, rut, direccion, email, fono);
 
-                obj.Guardar();
+                //agregar a la lista de clientes para la clase sesion
+
             }
 
 
-
         }
+
+
+        
     }
 }

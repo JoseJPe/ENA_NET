@@ -10,15 +10,21 @@ namespace ENA.Controllers
     class MascotaController
     {
 
-        public void InsertarMascota(int id, string nombre)
+
+        public void InsertaMascota(string NombreMascota, string TipoMascota, string RazaMascota, bool Vacunas, string Color, int Edad, string Sexo)
         {
-            if(id!=0 && !string.IsNullOrEmpty(nombre))
+            if(!string.IsNullOrEmpty(NombreMascota) && !string.IsNullOrEmpty(RazaMascota) && !string.IsNullOrEmpty(Color) && !string.IsNullOrEmpty(Sexo) && Edad != 0) //ojo! usar esto para verificar datos que vengan del form!!!!!!!!!!!!!!!!)
             {
 
-                Mascota obj = new Mascota(id, nombre);
+                Mascota objCliente = new Mascota(NombreMascota, TipoMascota, RazaMascota, Vacunas, Color, Edad, Sexo);// leer mas abajo
 
-                obj.Guardar();
+                //agregar a cliente para listar clientes y luego listar todo en sesion 
+
             }
+        }
+
+        public void InsertarMascota(int id, string nombre)
+        {
 
 
 
