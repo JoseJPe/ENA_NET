@@ -32,8 +32,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.GuardarDatos = new System.Windows.Forms.Button();
+            this.ConsultarControlServicio = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -91,24 +91,24 @@
             this.comboBox1.TabIndex = 5;
             this.comboBox1.Text = "Seleccione Cliente";
             // 
-            // button1
+            // GuardarDatos
             // 
-            this.button1.Location = new System.Drawing.Point(355, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 53);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Guardar Datos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.GuardarDatos.Location = new System.Drawing.Point(355, 25);
+            this.GuardarDatos.Name = "GuardarDatos";
+            this.GuardarDatos.Size = new System.Drawing.Size(122, 53);
+            this.GuardarDatos.TabIndex = 7;
+            this.GuardarDatos.Text = "Guardar Datos";
+            this.GuardarDatos.UseVisualStyleBackColor = true;
+            this.GuardarDatos.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // ConsultarControlServicio
             // 
-            this.button2.Location = new System.Drawing.Point(355, 114);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 62);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Consultar Control/Servicio";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ConsultarControlServicio.Location = new System.Drawing.Point(355, 114);
+            this.ConsultarControlServicio.Name = "ConsultarControlServicio";
+            this.ConsultarControlServicio.Size = new System.Drawing.Size(122, 62);
+            this.ConsultarControlServicio.TabIndex = 8;
+            this.ConsultarControlServicio.Text = "Consultar Control/Servicio";
+            this.ConsultarControlServicio.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -277,8 +277,8 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ConsultarControlServicio);
+            this.Controls.Add(this.GuardarDatos);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -299,8 +299,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button GuardarDatos;
+        private System.Windows.Forms.Button ConsultarControlServicio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox3;

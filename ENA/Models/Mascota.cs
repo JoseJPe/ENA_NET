@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ENA.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace ENA.Class
 
         public int ID { get; set; }
         public string Nombre { get; set; }
-
+        public List<Servicio> Servicios { get; set; }
 
         public Mascota(int id, string nombre)
         {
@@ -19,13 +20,13 @@ namespace ENA.Class
             this.Nombre = nombre;
         }
 
-        public bool Guardar()
-        {
-
-            // insertar datos en DB y que retorne un true
-
-            return true;
-        }
+        //public bool Guardar()
+        //{
+        //
+        //    // insertar datos en DB y que retorne un true
+        //
+        //    return true;
+        //}
 
     }
 }

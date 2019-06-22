@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Mascota.cs" />
+    <Compile Include="Models\Servicio.cs" />
     <Compile Include="Models\Sesion.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\MascotaController.cs" />
@@ -56,6 +57,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultarEliminar_ControlServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultarEliminar_ControlServicio.Designer.cs">
+      <DependentUpon>ConsultarEliminar_ControlServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\IngresarClienteMascota.cs">
       <SubType>Form</SubType>
@@ -73,6 +80,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConsultarEliminar_ControlServicio.resx">
+      <DependentUpon>ConsultarEliminar_ControlServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\IngresarClienteMascota.resx">
       <DependentUpon>IngresarClienteMascota.cs</DependentUpon>

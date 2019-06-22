@@ -359,6 +359,10 @@
             // tipoRaza
             // 
             this.tipoRaza.FormattingEnabled = true;
+            this.tipoRaza.Items.AddRange(new object[] {
+            "Raza1",
+            "Raza2",
+            "Raza3"});
             this.tipoRaza.Location = new System.Drawing.Point(170, 73);
             this.tipoRaza.Name = "tipoRaza";
             this.tipoRaza.Size = new System.Drawing.Size(177, 21);
@@ -368,6 +372,11 @@
             // tipoMascota
             // 
             this.tipoMascota.FormattingEnabled = true;
+            this.tipoMascota.Items.AddRange(new object[] {
+            "Perro",
+            "Gato",
+            "Ave",
+            "Pez"});
             this.tipoMascota.Location = new System.Drawing.Point(170, 42);
             this.tipoMascota.Name = "tipoMascota";
             this.tipoMascota.Size = new System.Drawing.Size(177, 21);
