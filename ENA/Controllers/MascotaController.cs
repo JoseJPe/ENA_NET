@@ -23,12 +23,7 @@ namespace ENA.Controllers
             }
         }
 
-        public void InsertarMascota(int id, string nombre)
-        {
-
-
-
-        }
+        
 
 
     }

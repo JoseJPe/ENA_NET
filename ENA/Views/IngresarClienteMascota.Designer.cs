@@ -54,13 +54,13 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.checkVacunaSi = new System.Windows.Forms.CheckBox();
-            this.checkVacunaNo = new System.Windows.Forms.CheckBox();
-            this.checkHembra = new System.Windows.Forms.CheckBox();
-            this.checkMacho = new System.Windows.Forms.CheckBox();
             this.tipoRaza = new System.Windows.Forms.ComboBox();
             this.tipoMascota = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButtonHembra = new System.Windows.Forms.RadioButton();
+            this.radioButtonMacho = new System.Windows.Forms.RadioButton();
+            this.VacunasNo = new System.Windows.Forms.RadioButton();
+            this.VacunasSi = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -167,6 +167,7 @@
             this.GuardarDatos.TabIndex = 10;
             this.GuardarDatos.Text = "Guardar Datos";
             this.GuardarDatos.UseVisualStyleBackColor = true;
+            this.GuardarDatos.Click += new System.EventHandler(this.GuardarDatos_Click);
             // 
             // IngresarDatos
             // 
@@ -176,6 +177,7 @@
             this.IngresarDatos.TabIndex = 11;
             this.IngresarDatos.Text = "Ingresar Control/Servicio";
             this.IngresarDatos.UseVisualStyleBackColor = true;
+            this.IngresarDatos.Click += new System.EventHandler(this.IngresarDatos_Click);
             // 
             // textFonoCliente
             // 
@@ -213,6 +215,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(634, 247);
             this.panel1.TabIndex = 14;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // label8
             // 
@@ -316,46 +319,6 @@
             this.label15.TabIndex = 25;
             this.label15.Text = "Vacunas al DIa";
             // 
-            // checkVacunaSi
-            // 
-            this.checkVacunaSi.AutoSize = true;
-            this.checkVacunaSi.Location = new System.Drawing.Point(175, 138);
-            this.checkVacunaSi.Name = "checkVacunaSi";
-            this.checkVacunaSi.Size = new System.Drawing.Size(35, 17);
-            this.checkVacunaSi.TabIndex = 26;
-            this.checkVacunaSi.Text = "Si";
-            this.checkVacunaSi.UseVisualStyleBackColor = true;
-            // 
-            // checkVacunaNo
-            // 
-            this.checkVacunaNo.AutoSize = true;
-            this.checkVacunaNo.Location = new System.Drawing.Point(315, 141);
-            this.checkVacunaNo.Name = "checkVacunaNo";
-            this.checkVacunaNo.Size = new System.Drawing.Size(40, 17);
-            this.checkVacunaNo.TabIndex = 27;
-            this.checkVacunaNo.Text = "No";
-            this.checkVacunaNo.UseVisualStyleBackColor = true;
-            // 
-            // checkHembra
-            // 
-            this.checkHembra.AutoSize = true;
-            this.checkHembra.Location = new System.Drawing.Point(315, 110);
-            this.checkHembra.Name = "checkHembra";
-            this.checkHembra.Size = new System.Drawing.Size(63, 17);
-            this.checkHembra.TabIndex = 29;
-            this.checkHembra.Text = "Hembra";
-            this.checkHembra.UseVisualStyleBackColor = true;
-            // 
-            // checkMacho
-            // 
-            this.checkMacho.AutoSize = true;
-            this.checkMacho.Location = new System.Drawing.Point(175, 107);
-            this.checkMacho.Name = "checkMacho";
-            this.checkMacho.Size = new System.Drawing.Size(59, 17);
-            this.checkMacho.TabIndex = 28;
-            this.checkMacho.Text = "Macho";
-            this.checkMacho.UseVisualStyleBackColor = true;
-            // 
             // tipoRaza
             // 
             this.tipoRaza.FormattingEnabled = true;
@@ -368,6 +331,7 @@
             this.tipoRaza.Size = new System.Drawing.Size(177, 21);
             this.tipoRaza.TabIndex = 30;
             this.tipoRaza.Text = "Seleccione Raza";
+            this.tipoRaza.SelectedIndexChanged += new System.EventHandler(this.TipoRaza_SelectedIndexChanged);
             // 
             // tipoMascota
             // 
@@ -382,15 +346,16 @@
             this.tipoMascota.Size = new System.Drawing.Size(177, 21);
             this.tipoMascota.TabIndex = 31;
             this.tipoMascota.Text = "Tipo de Mascota";
+            this.tipoMascota.SelectedIndexChanged += new System.EventHandler(this.TipoMascota_SelectedIndexChanged);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.radioButtonHembra);
+            this.panel2.Controls.Add(this.radioButtonMacho);
+            this.panel2.Controls.Add(this.VacunasNo);
             this.panel2.Controls.Add(this.tipoMascota);
+            this.panel2.Controls.Add(this.VacunasSi);
             this.panel2.Controls.Add(this.tipoRaza);
-            this.panel2.Controls.Add(this.checkHembra);
-            this.panel2.Controls.Add(this.checkMacho);
-            this.panel2.Controls.Add(this.checkVacunaNo);
-            this.panel2.Controls.Add(this.checkVacunaSi);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
@@ -406,6 +371,52 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(411, 278);
             this.panel2.TabIndex = 32;
+            // 
+            // radioButtonHembra
+            // 
+            this.radioButtonHembra.AutoSize = true;
+            this.radioButtonHembra.Location = new System.Drawing.Point(259, 109);
+            this.radioButtonHembra.Name = "radioButtonHembra";
+            this.radioButtonHembra.Size = new System.Drawing.Size(62, 17);
+            this.radioButtonHembra.TabIndex = 35;
+            this.radioButtonHembra.TabStop = true;
+            this.radioButtonHembra.Text = "Hembra";
+            this.radioButtonHembra.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonMacho
+            // 
+            this.radioButtonMacho.AutoSize = true;
+            this.radioButtonMacho.Location = new System.Drawing.Point(175, 109);
+            this.radioButtonMacho.Name = "radioButtonMacho";
+            this.radioButtonMacho.Size = new System.Drawing.Size(58, 17);
+            this.radioButtonMacho.TabIndex = 34;
+            this.radioButtonMacho.TabStop = true;
+            this.radioButtonMacho.Text = "Macho";
+            this.radioButtonMacho.UseVisualStyleBackColor = true;
+            this.radioButtonMacho.CheckedChanged += new System.EventHandler(this.RadioButtonMacho_CheckedChanged);
+            // 
+            // VacunasNo
+            // 
+            this.VacunasNo.AutoSize = true;
+            this.VacunasNo.Location = new System.Drawing.Point(261, 143);
+            this.VacunasNo.Name = "VacunasNo";
+            this.VacunasNo.Size = new System.Drawing.Size(39, 17);
+            this.VacunasNo.TabIndex = 33;
+            this.VacunasNo.TabStop = true;
+            this.VacunasNo.Text = "No";
+            this.VacunasNo.UseVisualStyleBackColor = true;
+            // 
+            // VacunasSi
+            // 
+            this.VacunasSi.AutoSize = true;
+            this.VacunasSi.Location = new System.Drawing.Point(175, 144);
+            this.VacunasSi.Name = "VacunasSi";
+            this.VacunasSi.Size = new System.Drawing.Size(34, 17);
+            this.VacunasSi.TabIndex = 32;
+            this.VacunasSi.TabStop = true;
+            this.VacunasSi.Text = "Si";
+            this.VacunasSi.UseVisualStyleBackColor = true;
+            this.VacunasSi.CheckedChanged += new System.EventHandler(this.VacunasSi_CheckedChanged);
             // 
             // IngresarClienteMascota
             // 
@@ -456,12 +467,12 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.CheckBox checkVacunaSi;
-        private System.Windows.Forms.CheckBox checkVacunaNo;
-        private System.Windows.Forms.CheckBox checkHembra;
-        private System.Windows.Forms.CheckBox checkMacho;
         private System.Windows.Forms.ComboBox tipoRaza;
         private System.Windows.Forms.ComboBox tipoMascota;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton VacunasNo;
+        private System.Windows.Forms.RadioButton VacunasSi;
+        private System.Windows.Forms.RadioButton radioButtonHembra;
+        private System.Windows.Forms.RadioButton radioButtonMacho;
     }
 }

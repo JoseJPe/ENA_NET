@@ -38,8 +38,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,6 +48,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.VacunasSi = new System.Windows.Forms.RadioButton();
+            this.VacunasNo = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,29 +145,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(55, 321);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(127, 16);
+            this.label8.Size = new System.Drawing.Size(131, 16);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Programa Vacunas:";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(200, 322);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(33, 17);
-            this.checkBox1.TabIndex = 13;
-            this.checkBox1.Text = "si";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(271, 322);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(38, 17);
-            this.checkBox2.TabIndex = 14;
-            this.checkBox2.Text = "no";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.label8.Text = "Programar Vacunas:";
             // 
             // label9
             // 
@@ -258,12 +238,37 @@
             this.comboBox2.TabIndex = 6;
             this.comboBox2.Text = "Seleccione Mascota";
             // 
+            // VacunasSi
+            // 
+            this.VacunasSi.AutoSize = true;
+            this.VacunasSi.Location = new System.Drawing.Point(204, 321);
+            this.VacunasSi.Name = "VacunasSi";
+            this.VacunasSi.Size = new System.Drawing.Size(34, 17);
+            this.VacunasSi.TabIndex = 23;
+            this.VacunasSi.TabStop = true;
+            this.VacunasSi.Text = "Si";
+            this.VacunasSi.UseVisualStyleBackColor = true;
+            this.VacunasSi.CheckedChanged += new System.EventHandler(this.VacunasSi_CheckedChanged);
+            // 
+            // VacunasNo
+            // 
+            this.VacunasNo.AutoSize = true;
+            this.VacunasNo.Location = new System.Drawing.Point(290, 320);
+            this.VacunasNo.Name = "VacunasNo";
+            this.VacunasNo.Size = new System.Drawing.Size(39, 17);
+            this.VacunasNo.TabIndex = 24;
+            this.VacunasNo.TabStop = true;
+            this.VacunasNo.Text = "No";
+            this.VacunasNo.UseVisualStyleBackColor = true;
+            // 
             // IngresarControlServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.ClientSize = new System.Drawing.Size(578, 506);
+            this.Controls.Add(this.VacunasNo);
+            this.Controls.Add(this.VacunasSi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label11);
@@ -271,8 +276,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label7);
@@ -305,8 +308,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
@@ -317,5 +318,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.RadioButton VacunasSi;
+        private System.Windows.Forms.RadioButton VacunasNo;
     }
 }

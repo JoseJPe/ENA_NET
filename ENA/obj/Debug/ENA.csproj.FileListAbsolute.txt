@@ -9,3 +9,16 @@ C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA\ENA\ob
 C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA\ENA\obj\Debug\ENA.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA\ENA\obj\Debug\ENA.exe
 C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA\ENA\obj\Debug\ENA.pdb
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\bin\Debug\ENA.exe.config
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\bin\Debug\ENA.exe
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\bin\Debug\ENA.pdb
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.Form1.resources
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.Views.ConsultarEliminar_ControlServicio.resources
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.IngresarClienteMascota.resources
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.Properties.Resources.resources
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.Views.IngresarControlServicio.resources
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.exe
+C:\Users\Usuario\Desktop\José Pérez - Juan Cataldo - Joaquin Castro\ENA git\ENA\obj\Debug\ENA.pdb

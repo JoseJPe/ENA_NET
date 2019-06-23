@@ -26,5 +26,24 @@ namespace ENA.Views
         {
 
         }
+
+        private void VacunasSi_CheckedChanged(object sender, EventArgs e)
+        {
+            bool vacuna;
+
+            if (VacunasSi.Checked)
+            {
+                VacunasNo.Checked = false;
+                vacuna = VacunasSi.Checked;
+            }
+
+            if (VacunasNo.Checked)
+            {
+                VacunasSi.Checked = false;
+                vacuna = VacunasSi.Checked;
+            }
+
+
+        }
     }
 }
