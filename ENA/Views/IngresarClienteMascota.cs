@@ -23,56 +23,35 @@ namespace ENA
 
         private void Label2_Click(object sender, EventArgs e)
         {
-
         }
-
         private void Label3_Click(object sender, EventArgs e)
         {
-
         }
-
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
-            // Nombre cliente
-
         }
-
         private void TextBox2_TextChanged(object sender, EventArgs e)
         {
-            // Rut Cliente
-
-
-
         }
-
         private void TextBox3_TextChanged(object sender, EventArgs e)
         {
-            // Direccion Cliente
-
-
-
         }
-
         private void TextBox4_TextChanged(object sender, EventArgs e)
         {
-            // Email Cliente
-
-
-
         }
-
         private void IngresarClienteMascota_Load(object sender, EventArgs e)
         {
-
         }
-
         private void Label8_Click(object sender, EventArgs e)
         {
-
         }
+
+
+
 
         private void GuardarDatos_Click(object sender, EventArgs e)
         {
+
             ClienteController objControllerCliente = new ClienteController();
 
             objControllerCliente.InsertaCliente(textNameCliente.Text, textRutCliente.Text, textDireccionCliente.Text, textEmailCliente.Text, Convert.ToInt32(textFonoCliente.Text));
@@ -82,6 +61,10 @@ namespace ENA
             objControllerMascota.InsertaMascota(textNombreMascota.Text, tipoMascota.Text, tipoRaza.Text , VacunasSi.Checked, textColorMascota.Text, Convert.ToInt32(textEdadMascota.Text), sexo );
 
         }
+
+
+
+
 
         private void Panel1_Paint(object sender, PaintEventArgs e)
         {

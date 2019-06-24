@@ -45,5 +45,10 @@ namespace ENA.Views
 
 
         }
+
+        private void ConsultarControlServicio_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

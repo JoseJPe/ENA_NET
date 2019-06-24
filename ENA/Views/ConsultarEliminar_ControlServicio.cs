@@ -21,5 +21,10 @@ namespace ENA.Views
         {
             
         }
+
+        private void ListarObjetos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

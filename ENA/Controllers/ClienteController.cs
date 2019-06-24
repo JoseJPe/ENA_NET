@@ -24,6 +24,16 @@ namespace ENA.Controllers
 
         }
 
+        public void EliminarCliente(string nombreCliente)
+        {
+            if (!string.IsNullOrEmpty(nombreCliente))
+            {
+
+
+
+            }
+        }
+
 
         
     }

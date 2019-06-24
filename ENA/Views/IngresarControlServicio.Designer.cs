@@ -109,6 +109,7 @@
             this.ConsultarControlServicio.TabIndex = 8;
             this.ConsultarControlServicio.Text = "Consultar Control/Servicio";
             this.ConsultarControlServicio.UseVisualStyleBackColor = true;
+            this.ConsultarControlServicio.Click += new System.EventHandler(this.ConsultarControlServicio_Click);
             // 
             // label6
             // 

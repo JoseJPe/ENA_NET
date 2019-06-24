@@ -128,6 +128,7 @@
             this.ListarObjetos.TabIndex = 7;
             this.ListarObjetos.Text = "Buscar";
             this.ListarObjetos.UseVisualStyleBackColor = true;
+            this.ListarObjetos.Click += new System.EventHandler(this.ListarObjetos_Click);
             // 
             // EliminarObjetos
             // 
