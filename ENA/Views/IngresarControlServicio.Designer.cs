@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listaClientes = new System.Windows.Forms.ComboBox();
             this.GuardarDatos = new System.Windows.Forms.Button();
             this.ConsultarControlServicio = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -41,13 +41,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TotalPago = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.listaMascotas = new System.Windows.Forms.ComboBox();
             this.VacunasSi = new System.Windows.Forms.RadioButton();
             this.VacunasNo = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
@@ -82,14 +82,15 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Nombre:";
             // 
-            // comboBox1
+            // listaClientes
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(80, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(127, 21);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.Text = "Seleccione Cliente";
+            this.listaClientes.FormattingEnabled = true;
+            this.listaClientes.Location = new System.Drawing.Point(80, 40);
+            this.listaClientes.Name = "listaClientes";
+            this.listaClientes.Size = new System.Drawing.Size(127, 21);
+            this.listaClientes.TabIndex = 5;
+            this.listaClientes.Text = "Seleccione Cliente";
+            this.listaClientes.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // GuardarDatos
             // 
@@ -134,11 +135,16 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Baño",
+            "Corte de pelo",
+            "Corte de uñas"});
             this.comboBox3.Location = new System.Drawing.Point(191, 275);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 11;
             this.comboBox3.Text = "Seleccione servicio";
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.ComboBox3_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -177,12 +183,13 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Fecha vacunas:";
             // 
-            // textBox2
+            // TotalPago
             // 
-            this.textBox2.Location = new System.Drawing.Point(169, 445);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(155, 20);
-            this.textBox2.TabIndex = 19;
+            this.TotalPago.Location = new System.Drawing.Point(169, 445);
+            this.TotalPago.Name = "TotalPago";
+            this.TotalPago.Size = new System.Drawing.Size(155, 20);
+            this.TotalPago.TabIndex = 19;
+            this.TotalPago.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // label11
             // 
@@ -203,7 +210,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.listaClientes);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(47, 11);
@@ -230,14 +237,15 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Nombre:";
             // 
-            // comboBox2
+            // listaMascotas
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(130, 144);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(127, 21);
-            this.comboBox2.TabIndex = 6;
-            this.comboBox2.Text = "Seleccione Mascota";
+            this.listaMascotas.FormattingEnabled = true;
+            this.listaMascotas.Location = new System.Drawing.Point(130, 144);
+            this.listaMascotas.Name = "listaMascotas";
+            this.listaMascotas.Size = new System.Drawing.Size(127, 21);
+            this.listaMascotas.TabIndex = 6;
+            this.listaMascotas.Text = "Seleccione Mascota";
+            this.listaMascotas.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
             // 
             // VacunasSi
             // 
@@ -267,13 +275,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(578, 506);
+            this.ClientSize = new System.Drawing.Size(519, 506);
             this.Controls.Add(this.VacunasNo);
             this.Controls.Add(this.VacunasSi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TotalPago);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -283,7 +291,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ConsultarControlServicio);
             this.Controls.Add(this.GuardarDatos);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.listaMascotas);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -302,7 +310,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox listaClientes;
         private System.Windows.Forms.Button GuardarDatos;
         private System.Windows.Forms.Button ConsultarControlServicio;
         private System.Windows.Forms.Label label6;
@@ -312,13 +320,13 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TotalPago;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox listaMascotas;
         private System.Windows.Forms.RadioButton VacunasSi;
         private System.Windows.Forms.RadioButton VacunasNo;
     }

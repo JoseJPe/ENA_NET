@@ -1,4 +1,5 @@
-﻿using ENA.Controllers;
+﻿using ENA.Class;
+using ENA.Controllers;
 using ENA.Views;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,9 @@ namespace ENA
 {
     public partial class IngresarClienteMascota : Form
     {
-        string sexo;
+        
+
+        public string Sexo { get; private set; }
 
         public IngresarClienteMascota()
         {
@@ -52,13 +55,54 @@ namespace ENA
         private void GuardarDatos_Click(object sender, EventArgs e)
         {
 
-            ClienteController objControllerCliente = new ClienteController();
 
-            objControllerCliente.InsertaCliente(textNameCliente.Text, textRutCliente.Text, textDireccionCliente.Text, textEmailCliente.Text, Convert.ToInt32(textFonoCliente.Text));
+            if (!string.IsNullOrEmpty(textNameCliente.Text) && !string.IsNullOrEmpty(textRutCliente.Text) && !string.IsNullOrEmpty(textDireccionCliente.Text) && !string.IsNullOrEmpty(textEmailCliente.Text) && !string.IsNullOrEmpty(textFonoCliente.Text) && Convert.ToInt32(textFonoCliente.Text) != 0)
+            {
 
-            MascotaController objControllerMascota = new MascotaController();
 
-            objControllerMascota.InsertaMascota(textNombreMascota.Text, tipoMascota.Text, tipoRaza.Text , VacunasSi.Checked, textColorMascota.Text, Convert.ToInt32(textEdadMascota.Text), sexo );
+
+                ClienteController objControllerCliente = new ClienteController();
+
+                objControllerCliente.InsertaCliente(textNameCliente.Text, textRutCliente.Text, textDireccionCliente.Text, textEmailCliente.Text, Convert.ToInt32(textFonoCliente.Text));
+
+
+                if (!string.IsNullOrEmpty(textNombreMascota.Text) && !string.IsNullOrEmpty(tipoMascota.Text) && !string.IsNullOrEmpty(textColorMascota.Text) && !string.IsNullOrEmpty(Sexo) && Convert.ToInt32(textEdadMascota.Text) != 0 && !string.IsNullOrEmpty(textEdadMascota.Text)) 
+                {
+
+
+                    MascotaController objControllerMascota = new MascotaController();
+
+                    objControllerMascota.InsertaMascota(textNombreMascota.Text, tipoMascota.Text, tipoRaza.Text, VacunasSi.Checked, textColorMascota.Text, Convert.ToInt32(textEdadMascota.Text), Sexo);
+                }
+                else
+                {
+                    MessageBox.Show("Datos de mascota incorrectos o vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Datos de cliente incorrectos o vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+
+            }
+
+
+            //Limpiar campos
+
+            textNameCliente.Text = "";
+            textRutCliente.Text = "";
+            textDireccionCliente.Text = "";
+            textEmailCliente.Text = "";
+
+
+
+            textNombreMascota.Text = "";
+            tipoMascota.Text = "";
+            tipoRaza.Text = "";
+            textColorMascota.Text = "";
 
         }
 
@@ -104,7 +148,7 @@ namespace ENA
             {
                 radioButtonHembra.Checked = false;
 
-                sexo = "Macho";
+                Sexo = "Macho";
 
             }
 
@@ -112,7 +156,7 @@ namespace ENA
             {
                 radioButtonMacho.Checked = false;
 
-                sexo = "Hembra";
+                Sexo = "Hembra";
 
             }
         }

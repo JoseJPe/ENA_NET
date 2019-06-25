@@ -21,6 +21,8 @@ namespace ENA.Class
 
         public List<Servicio> Servicios { get; set; }
 
+
+
         public Mascota(string NombreMascota, string TipoMascota, string RazaMascota, bool Vacunas, string Color, int Edad, string Sexo)
         {
             this.NombreMascota = NombreMascota;

@@ -28,12 +28,5 @@ namespace ENA.Class
 
 
 
-        // En la ena no pide actualizar o eliminar
-        //public void EliminarCliente()
-        //{
-        // ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡todo statico!!!!!!!!!!!!!!!!!1
-        //}
-
-
     }
 }
